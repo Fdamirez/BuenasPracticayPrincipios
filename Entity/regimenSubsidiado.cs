@@ -4,12 +4,14 @@ using System.Text;
 
 namespace Entity
 {
-    class RegimenSubsidiado : Afiliacion
+    class RegimenSubsidiado : LiquidacionRegimen
     {
-        public double  CuotaModeradora { get; set; }
+       
+        public double CuotaModeradora { get; set; }
+
         public double CalcularcuotaModeradora()
         {
-            return 0.0;
+            return 0.0; 
         }
     }
 }
