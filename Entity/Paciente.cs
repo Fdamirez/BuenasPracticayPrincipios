@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Entity
 {
-    class Paciente
+    public class Paciente
     {
+        public string identificacion { get; set; }
+        public Afiliacion Afiliacion { get; set; }
+        public double salario { get; set; }
+
+
+
     }
 }

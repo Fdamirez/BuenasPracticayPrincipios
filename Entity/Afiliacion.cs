@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Entity
 {
-    class Afiliacion
+    public interface Afiliacion
     {
+        public double numeroLiquidacion { get; set; }
+        public DateTime fechaLiquidacion { get; set; }
+        public double tarifa { get; set; }
+        public double cuotaModeradora { get; set; }
+        public double valorServicio { get; set; }
+
     }
 }

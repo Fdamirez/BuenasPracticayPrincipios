@@ -4,7 +4,9 @@ using System.Text;
 
 namespace Entity
 {
-    class regimenContributivo
+    class regimenSubsidiado : Afiliacion
     {
+       
+
     }
 }
