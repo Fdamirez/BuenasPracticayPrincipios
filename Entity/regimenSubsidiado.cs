@@ -15,44 +15,17 @@ namespace Entity
 
         }
 
-        public void CalcularTarifa(double Salario)
-        {
-
-
-            if (Salario < (SMMLV * 2))
-            {
-                Tarifa = 0.15;
-            }
-            else if (Salario < (SMMLV * 5))
-            {
-                Tarifa = 0.20;
-            }
-            else if (Salario >= (SMMLV * 5))
-            {
-                Tarifa = 0.25;
-            }
-
-        }
-
-        public void calculartopeMaximo(double Salario)
-        {
-            if (Salario < (SMMLV * 2))
-            {
-                TopeMax = 250000;
-            }
-            else if (Salario < (SMMLV * 5))
-            {
-                TopeMax = 0.20;
-            }
-            else if (Salario >= (SMMLV * 5))
-            {
-                TopeMax = 0.25;
-            }
-        }
-
         public void calcularCuotaModeladora()
         {
+            Tarifa = 0.05;
+            TopeMax = 200000;
             CuotaModeradora = Tarifa * ValorServicio;
+
+            if (TopeMax < CuotaModeradora)
+            {
+                CuotaModeradora = TopeMax; 
+            }
+
         }
 
     }
