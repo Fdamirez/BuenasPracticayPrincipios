@@ -4,14 +4,56 @@ using System.Text;
 
 namespace Entity
 {
-    class RegimenSubsidiado : LiquidacionRegimen
+    class RegimenSubsidiado : Regimen 
     {
-       
-        public double CuotaModeradora { get; set; }
+        double SMMLV = 908.526;
 
-        public double CalcularcuotaModeradora()
+        public RegimenSubsidiado(double numeroLiquidacion, double valorServicio, DateTime fechaLiquidacion,
+            double cuotaModeradora, double tarifa, double topeMax) : base
+            (numeroLiquidacion, valorServicio, fechaLiquidacion, cuotaModeradora, tarifa, topeMax)
         {
-            return 0.0; 
+
         }
+
+        public void CalcularTarifa(double Salario)
+        {
+
+
+            if (Salario < (SMMLV * 2))
+            {
+                Tarifa = 0.15;
+            }
+            else if (Salario < (SMMLV * 5))
+            {
+                Tarifa = 0.20;
+            }
+            else if (Salario >= (SMMLV * 5))
+            {
+                Tarifa = 0.25;
+            }
+
+        }
+
+        public void calculartopeMaximo(double Salario)
+        {
+            if (Salario < (SMMLV * 2))
+            {
+                TopeMax = 250000;
+            }
+            else if (Salario < (SMMLV * 5))
+            {
+                TopeMax = 0.20;
+            }
+            else if (Salario >= (SMMLV * 5))
+            {
+                TopeMax = 0.25;
+            }
+        }
+
+        public void calcularCuotaModeladora()
+        {
+            CuotaModeradora = Tarifa * ValorServicio;
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 
 namespace Presentacion
 {
@@ -8,7 +9,9 @@ namespace Presentacion
         
         static void Main(string[] args)
         {
-            
+
+            Paciente paciente;
+
             do
             {
                 Console.WriteLine("\t\tIPS MAS SALUD Y VIDAD\n");
