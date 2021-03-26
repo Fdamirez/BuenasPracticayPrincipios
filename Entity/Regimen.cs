@@ -2,7 +2,7 @@
 
 namespace Entity
 {
-    public class Regimen
+    public abstract class Regimen
     {
 
         double numeroLiquidacion, valorServicio;

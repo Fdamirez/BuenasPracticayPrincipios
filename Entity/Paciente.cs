@@ -10,7 +10,5 @@ namespace Entity
         public string identificacion { get; set; }
         public string nombre { get; set; }
         public double salario { get; set; }
-        public Regimen regimen { get; set; }
-
     } 
 }

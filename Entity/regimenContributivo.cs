@@ -7,7 +7,7 @@ namespace Entity
     public class RegimenContributivo : Regimen 
     {
 
-        double SMMLV = 908.526;
+        const double SMMLV = 908.526;
 
         public RegimenContributivo(double numeroLiquidacion, double valorServicio, DateTime fechaLiquidacion,
             double cuotaModeradora, double tarifa, double topeMax) : base 
